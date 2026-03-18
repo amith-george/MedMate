@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "MedMate",
+    "slug": "MedMate",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "scheme": "medmate",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.medmate.app",
+      "googleServicesFile": "./config/GoogleService-Info.plist"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./src/assets/images/android-icon-foreground.png",
+        "backgroundImage": "./src/assets/images/android-icon-background.png"
+      },
+      "package": "com.medmate.app",
+      "googleServicesFile": "./config/google-services.json"
+    },
+    "web": {
+      "favicon": "./src/assets/images/favicon.png"
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./src/assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "icon": "./src/assets/images/icon.png",
+          "color": "#ffffff",
+          "sounds": [
+            "./src/assets/sounds/medalarm.wav"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MedMate needs access to your photos to read prescriptions.",
+          "cameraPermission": "MedMate needs access to your camera to scan medicine labels."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a5b4ac4f-9cec-4576-8fa1-8141a771a62e"
+      }
+    }
+  }
+}
